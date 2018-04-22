@@ -26,6 +26,7 @@ async.waterfall([
 , async.apply(commonUtilities.findOneDocs, d, n, profiler)
 ], function (err) {
   profiler.step("Benchmark finished");
+  setInterval(function(){}, 1000);
 
   if (err) { return console.log("An error was encountered: ", err); }
 });
